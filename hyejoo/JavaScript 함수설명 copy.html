@@ -1,0 +1,31 @@
+=사용법=
+1. html문서안에 끼워넣기
+   <head>사이 <script>에 함수를 작성하고 <body>안에 원하는 위치에서 함수를 불러준다
+2.외부파일(js확장자)로 만들기
+
+=구문=
+1 선언문 : 변수생성자 + 변수 이름; 
+           var a;  (var은 거의 모든 데이터형의 변수선언이 가능)
+2 대입문 : 좌변 = 우변;
+           a = 3;
+
+//<input type = "button" onClick="alert('hi')" value="누르기"/>
+//<input type = "text" onchange="alert('changed')"/>
+//<input type = "text" onkeydown="alert('key down!')"/>
+<script>는 동적 연산처리등등 할수있게해줌
+doucument.write 웹페이지에 출력하게해줌,모든 HTML 요소를 지워버리고 결과값만 나옴
+<input> 은 버튼태그
+onclick,onchange는 이벤트(클릭, 내용이 변했을때)가발생했을때 스크립트가 실행되도록하는것
+alert(창에 출력하고싶은 내용) 은 경고창
+alert(문자열아무거나.length) 문자의 개수 경고창에 출력
+
+querySelector : query(찾다) Selector(식별자 id,class)
+
+document.getElementById(id) : div, p 등 텍스트 그림 출력할수 있는 요소에 접근
+
+innerHTML : 요소에 붙여진 ID 를 통해 그 요소에 Script 내용을 그자리에서 출력 
+            전체페이지,요소를 빠르게 써줌 (doucument.write사용시 요소를 새창에서 결과값이 나오지만 이걸사용하면 그자리에 결과값 출력)
+textContent : 텍스트인 내용만을 가져옴
+
+console.log : 콘솔창에서 스크립트의 실행결과를 빠르게 확인(간단한 계산, 디버깅에서 유용)
+
