@@ -3,20 +3,32 @@
 
 <body>
   <h2>자바스크립트 데이터타입 종류</h2>
-  
+  <p>숫자 + 문자열 -> 숫자먼저 연산후 문자열</p>
+  <p>배열은 여러개의 변수를 [] 로 묶은것</p>
   <p id = "show"></p>
+  
+
   
 <script>
   var x;
   var age = 25;
   var name = "Scarlett";
   var obj = {FirstName : "Scarlett", lastName : "Johansson"};
+  var c = 3.141592
+  var y = 314e6;
+  var z = 315e-6;
+  var flowers = ["rose", "daisy", "lilac"];
 
   document.getElementById("show").innerHTML = 
   "아무것도 안넣었을때 :" + x + "<br>" +
   "숫자 :" + age + "<br>" +
   "문자열 : " + name + "<br>" +
-  "객체 : " obj.FirstName + " " + obj.lastName;
+  "객체 : " + obj.FirstName + " " + obj.lastName + "<br>" +
+  "실수 : " + c + "<br>" +
+  "큰수 : " + y + "<br>" +
+  "작은수 : " + z;
+  "내가 가장 좋아하는 꽃은" + flowers[0] + "입니다";
+
  </script>
 </body>
 </html>               

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>WEB1 - JavaScript</title>
+    <script>
+        function confirmTest() {
+          var con = confirm("계속 진행을 하시겠습니까?");
+          if(con == true){
+            document.getElementById('message').innerText = "계속"
+          //document.write('') 는 새페이지에서''내용 띄움
+          //alert('')는 경고창에서''내용 띄움
+          }
+          else if(con == false){
+            document.getElementById('message').innerText = "그만"
+          } 
+                  }
+          
+
+    </script>
+</head>
+<body>
+<form>
+<input type = "button" name="alerttest" value="대화창테스트" onclick="confirmTest();"/>
+</form>
+<p id = "message">여기</p>
+</body>
+</html>               
+
+<!--
+  질문창 띄움  p 에 출력
+-->

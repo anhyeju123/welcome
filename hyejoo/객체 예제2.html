@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>WEB1 - JavaScript</title>
+</head>
+<body>
+<h2>자바스크립트 객체</h2>
+
+<p>알라딘의 그 여배우는 누구야?</p>
+
+<p id = "show"></p>
+
+<script>
+var actress = {
+  firstName:"나오미",
+  lastName:"스콧",
+  age:26,
+  born:"영국"
+};
+
+document.getElementById("show").innerHTML = 
+"그배우는" + actress.firstName + " " +  actress.lastName + "인데" + actress.born + "에서 태어났고" + actress.age + "살 이래.";
+</script>
+</body>
+</html>               
+

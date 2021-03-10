@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>WEB1 - JavaScript</title>
+    <script type = "text/javascript">
+//생성자
+       function Dog(color, name, age) {  //개에 관한 생성자 함수
+           this.color = color;   //색에 관한 프로퍼티
+           this.name = name;     //이름에 관한 프로퍼티
+           this.age = age;       //나이에 관한 프로퍼티
+       }
+//객체 생성
+var myDog = new Dog("흰색", "마루", 1); // 이 객체는 dog 라는 프로토타입(기능) 을 가짐
+
+//이미 생성된 객체에 프로퍼티(속성), 메소드(함수) 추가하는 방법
+myDog.family = "시베리안 허스키"; // 품종 프로퍼티(속성) 추가
+myDog.breed = function() {  //털색, 품종 반환해 주는 메소드
+    return this.color + "" + this.family;
+}
+
+document.write("우리 집 강아지는 " + myDog.name + "라는 이름의" + myDog.color + "털이 매력인 강아지 입니다." + "</b >");
+document.write("우리 집 강아지는 " + myDog.breed() + "입니다.");
+    </script>
+</head>
+<body>
+
+</body>
+</html>               
+

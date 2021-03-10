@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>WEB1 - JavaScript</title>
+    <script>
+        function promptTest() {
+          var name = prompt("당신의 이름:" , "이름은");
+            document.getElementById('message').innerText = name;
+        }
+
+    </script>
+</head>
+<body>
+<form>
+<input type = "button" name="prompttest" value="입력창테스트" onclick="promptTest();"/>
+</form>
+<p id = "message">여기</p>
+</body>
+</html>               
+
+<!--
+버튼 누르면 입력창을 띄워 입력한값 message에 띄우기
+ -->

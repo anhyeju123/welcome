@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>WEB1 - JavaScript</title>
+   
+    <script type="text/javascript">
+      //1.
+      var myVar = "global"; // 전역
+    
+      function checkscope( ) {
+      var myVar = "local"; // 지역
+      document.write(myVar); //지역변수 사용
+      }
+
+      //2. var 키워드 없이 선언하면 자동으로 전역변수가 된다.
+      var name = "global";
+      function checkscope(){
+        name = "local";  //전역변수 변경
+        name2 = "local";  // 새 전역변수가 선언됨      
+      }
+      </script>
+      </head>
+  <body>
+      <input type="button" onclick="checkscope()" value="Check Scpoe" />
+  </body>
+</html>

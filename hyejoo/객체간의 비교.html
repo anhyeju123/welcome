@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>WEB1 - JavaScript</title>
+    <script type = "text/javascript">
+//생성자
+       function Dog(color, name, age) {  //개에 관한 생성자 함수
+           this.color = color;   //색에 관한 프로퍼티
+           this.name = name;     //이름에 관한 프로퍼티
+           this.age = age;       //나이에 관한 프로퍼티
+       }
+//객체 생성
+var myDog = new Dog("흰색", "마루", 1); // 이 객체는 dog 라는 프로토타입(기능) 을 가짐
+var hisDog = new Dog("흰색", "마루", 1);
+
+document.write((myDog === hisDog)); //프로퍼티 값이 같아도 별개의 객체이므로 같다고 할수 없음
+                                              //자바에서 객체생성시 주소값이 다르듯이
+
+var herDog = hisDog; //hisDog 객체를 herDog에 대입
+document.write((herDog === hisDog)); //hisDog는 gerDog를 가르키므로 주소값이 같아 같다고 볼수 있음
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>               
+

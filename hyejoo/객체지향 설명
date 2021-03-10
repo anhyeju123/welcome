@@ -1,0 +1,68 @@
+=객체를 생성하는 방법=
+1. 리터럴 표기(literal notation)를 이용한 방법
+var 객체이름 = {
+
+    프로퍼티1이름 : 프로퍼티1의값,
+
+    프로퍼티2이름 : 프로퍼티2의값,
+};
+
+2. 생성자 함수(constructor function)를 이용한 방법
+var day = new Date(); // new 연산자를 사용하여 Date 타입의 객체를 생성함.
+
+document.write("올해는 " + day.getFullYear() + "년입니다.");
+
+3. Object.create() 메소드를 이용한 객체의 생성
+Object.create(프로토타입객체[, 새로운객체의프로퍼티1, 새로운객체의프로퍼티2, ...]);
+
+=객체사용법=
+var 객체명 = {
+  속성1:속성값 //객체 리터럴 (속성에 접근방법 1.객체명.속성명 2.객체명["속성명"])
+  속성2:속성값 
+  함수명:function() {
+    함수내용
+  } //함수에 호출 객체명.함수명()
+};
+
+객체 : 고양이
+속성(프로퍼티) : cat.name = kitty 
+                 cat.size = small
+                 cat.weight = 3kg
+                 cat.color = white
+함수(메소드) :   cat.eat()
+                 cat.play()
+                 cat.sleep()
+                 cat.attack()
+
+이것을 한번에 객체로 선언
+var cat = {
+  name:"키티"
+  color:"하얀색
+  play:function(){
+    return this.name+"는"+this.color+"냥이 에요"
+  }
+}
+
+프로토타입(생성자)의 프로퍼티(속성) 지우는방법 : delete.객체이름.프로퍼티이름;
+
+this : this가 사용된 함수를 가지고있는 객체를 가르킴 
+       객체 내부에서 사용시 객체 자신을 가르킴
+       어떠한 값도 가지고 있지 않음
+
+
+=상속=
+? 존재하는 객체를 기능으로 사용하여 그 객체를 복사해 재사용하는것 
+
+프로토타입 : 상속되는 정보를 제공하는 객체 ,기능 (실제로는 안돌아가는 껍데기상태)
+             - 모든 객체는 프로토타입(기능)을 가지고있다
+             사용법 객체명.prototype.name = value
+
+=메소드들=
+Object.defineProperty(myDog,'color', {enumerable : false}); : 객체에 프로퍼티를 추가하는 메소드
+                                                              프로퍼티의 속성도 설정할수 있음
+
+Object.keys(myDog) : 객체가 가진 프로퍼티중 열거 할 수 있는 프로퍼티 이름(변수명)을 배열에 담아 반환
+Object.getOwnPropertyNames(myDog) : 객체가 가진 모든프로퍼티의 이름(변수명)을 배열에 담아 반환            
+
+getter : 특정 프로퍼티 값을 받아오기 위한 메소드
+setter : 특정 프로퍼티 값을 설정하기 위한 메소드

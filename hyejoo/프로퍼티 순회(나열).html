@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>WEB1 - JavaScript</title>
+    <script type = "text/javascript">
+//생성자
+       function Dog(color, name, age) {  //개에 관한 생성자 함수
+           this.color = color;   //색에 관한 프로퍼티
+           this.name = name;     //이름에 관한 프로퍼티
+           this.age = age;       //나이에 관한 프로퍼티
+       }
+//객체 생성
+var myDog = new Dog("흰색", "마루", 1); // 이 객체는 dog 라는 프로토타입(기능) 을 가짐
+
+
+//Object.defineProperty(myDog,'color', {enumerable : false}); //color 프로퍼티의 enumerable 속성을 false로 설정
+document.write(Object.keys(myDog) + "</br >"); // 객체가 가진 프로퍼티중 열거 할 수 있는 프로퍼티 이름(변수명)을 배열에 담아 반환
+document.write(Object.getOwnPropertyNames(myDog)); //객체가 가진 모든프로퍼티의 이름(변수명)을 배열에 담아 반환
+    </script>
+</head>
+<body>
+
+</body>
+</html>               
+

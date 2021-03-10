@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>WEB1 - JavaScript</title>
+    <script type = "text/javascript">
+//생성자
+       function Dog(color, name, age) {  //개에 관한 생성자 함수
+           this.color = color;   //색에 관한 프로퍼티
+           this.name = name;     //이름에 관한 프로퍼티
+           this.age = age;       //나이에 관한 프로퍼티     
+           }
+ //현재 존재하고 있는 Dog프로토타입에 prototype 으로 family프로퍼티 추가
+ Dog.prototype.family="시베리안 허스키"
+ //현재 존재하고 있는 Dog프로토타입에 prototype 으로 breed메소드 추가
+ Dog.prototype.breed = function() {
+    return this.color + " " + this.family;
+ }
+
+
+//객체 생성
+var myDog = new Dog("흰색", "마루", 1); // 이 객체는 dog 라는 프로토타입(기능) 을 가짐
+var hisDog = new Dog("갈색", "콩이", 3);
+
+document.write("우리 집 강아지는 " + myDog.family + "이고, 친구네 집 강아지도" + hisDog.family + "입니다." + "</b >");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>               
+

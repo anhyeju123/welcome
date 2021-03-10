@@ -1,0 +1,13 @@
+1.getTextValue1
+gettext1 의 입력값을 name에 저장
+gettextresult1 텍스트를 name 으로 변경
+
+2.getTextValue2
+전체 input중 2,3번째에 해당하는 gettext3,gettext4 입력값 name1,name2에 저장
+gettextresult21, gettextresult22 텍스트를 각각 name1,name2으로 변경
+
+3.
+
+
+
+

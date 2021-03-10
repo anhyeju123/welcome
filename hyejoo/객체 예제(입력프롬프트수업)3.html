@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>반복문</title>
+<script type="text/javascript">
+// 멤버함수
+function setBook1Price(bookPrice) {
+	this.price1 = bookPrice; //책가격1 입력값 저장하는 함수
+}                          //(입력값을 저장해야하니깐 함수에서 처리한것임) 입력프롬프트를 받아줄 함수
+function setBook2Price(bookPrice) {
+	this.price2 = bookPrice; //책가격2 입력값 저장하는 함수
+}
+function sumPrice(bookPrice1, bookPrice2) {
+	this.sum = bookPrice1 + bookPrice2; //가격1과 가격2를 더하는 함수
+}
+// 생성자
+function book(title, author) {
+	this.title			= title;  // 멤버 변수
+	this.author    		= author; // 멤버 변수
+	this.setPrice1 		= setBook1Price; // setBook1Price 함수를 멤버 변수로 등록
+	this.setPrice2 		= setBook2Price; // setBook2Price 함수를 멤버 변수로 등록
+	this.getSumPrice 	= sumPrice; 	// getBook2Price 함수를 멤버 변수로 등록
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+var myBook = new book("자바스크립트", "김형태");
+// 입력 프롬프트1
+var firstPrice = prompt("첫번째 책값:", "첫번째 책값"); //프롬프트에 입력한 값을 firstPrice변수에 저장
+if(typeof(firstPrice) == "string") {  //연산처리를 위해서 문자열을 숫자로 변환 이걸 안하면 숫자가 문자열로 나옴
+firstPrice = Number(firstPrice); //입력값 검사시 문자열이 나오면 숫자로 바꾼후 firstPrice에 저장
+}
+alert(typeof(firstPrice)); //경고창에 firstPrice타입 띄움
+myBook.setPrice1(firstPrice); //멤버변수에 접근, 멤버함수의 bookPrice에 firstPrice값저장후 그것을 price1에 저장
+// 입력 프롬프트2
+var secondPrice = prompt("두번째 책값:", "두번째 책값"); //프롬프트에 입력한 값을 secondPrice에 저장
+if(typeof(secondPrice) == "string") {
+	secondPrice = Number(secondPrice); //입력값 검사시 문자열이 나오면 숫자로 바꾼후 secondPrice에 저장
+}
+alert(typeof(secondPrice)); // 경고창에 secondPrice의 타입 띄움
+myBook.setPrice2(secondPrice); // 멤버변수에 접근, 멤버함수의 bookPrice에 secondPrice값 저장후 그것을 price2에 저장
+myBook.getSumPrice(myBook.price1, myBook.price2); //위와 동일하게 접근후 bookPrice1, bookPrice2에 price1,price2 값 넣어 연산
+
+document.write("책이름: " + myBook.title + "<br />");
+document.write("책저자: " + myBook.author + "<br />");
+document.write("책가격1: " + myBook.price1 + "<br />");
+document.write("책가격2: " + myBook.price2 + "<br />");
+document.write("책값합계: " + myBook.sum + "<br />");
+</script>
+</body>
+</html>

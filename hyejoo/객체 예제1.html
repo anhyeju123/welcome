@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>WEB1 - JavaScript</title>
+</head>
+<body>
+<h2>자바스크립트 객체</h2>
+
+<p>우리집 고양이 키티</p>
+<p id = "show"></p>
+
+<script>
+var cat = {
+  name:"키티",
+  color:"하얀색",
+  play:function(){
+    return this.name+"는"+this.color+"냥이 에요";
+  }
+};
+
+document.getElementById("show").innerHTML = cat.play();
+</script>
+</body>
+</html>               
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>반복문</title>
+<script type="text/javascript">
+function getTextValue1() {
+	name = document.getElementById('gettext1').value;
+	document.getElementById('gettextresult1').innerText = name;
+}
+
+function getTextValue2() {
+	name1 = document.getElementsByTagName('input')[2].value;
+	name2 = document.getElementsByTagName('input')[3].value;
+	document.getElementById('gettextresult21').innerText = name1;
+	document.getElementById('gettextresult22').innerText = name2;
+}
+
+function getCheckboxValue() {
+	result = '';
+	count = document.getElementsByName('animal').length;
+	
+	for(i=0; i<count; i++) {
+		if(document.getElementsByName('animal')[i].checked == true) {
+			result += document.getElementsByName('animal')[i].value + ' ';
+		}
+		
+		document.getElementById('result1').innerText = result;
+	}	
+}
+
+function getGenderValue() {
+	result = '';
+	count = document.getElementsByName('gender').length;
+	
+	for(i=0; i<count; i++) {
+		if(document.getElementsByName('gender')[i].checked == true) {
+			result = document.getElementsByName('gender')[i].value;
+		}
+		
+		document.getElementById('result2').innerText = result;
+	}		
+}
+
+function getSelectedLanguageValue() {
+	변수명1 = select를 id를 이용해서 먼저얻어옴
+	변수명2 = 변수명1.options[변수명1.selectedIndex].text
+	
+}
+</script>
+</head>
+<body>
+<form>
+<label>이름1:</label>
+<input id="gettext1" type="text" name="gettext1" />
+<input id="gettext2" type="button" value="gettext2" onClick="getTextValue1()" />
+<br />
+<br />
+<div id="gettextresult1">클릭전</div>
+<hr />
+<label>이름2:</label>
+<input id="gettext3" type="text" name="gettext3" value="" />
+<input id="gettext4" type="button" value="gettext4" onClick="getTextValue2()" />
+<br />
+<br />
+<div id="gettextresult21">첫번째</div>
+<div id="gettextresult22">두번째값</div>
+<hr />
+<input 	type="checkbox" 
+		name="animal" 
+		value="cat" /> 고양이 
+<input 	type="checkbox" 
+		name="animal" 
+		value="dog" /> 개
+<input 	type="checkbox" 
+		name="animal" 
+		value="pig" /> 돼지		
+<input type="button" value="체크확인" onClick="getCheckboxValue()" />
+<div id="result1">체크된 값</div>
+<hr />
+<br />
+<input 	type='radio'
+		name ='gender'
+		value = 'male' /> 남성
+<input 	type='radio'
+		name ='gender'
+		value = 'female' /> 여성
+<input type="button" value="성별확인" onClick="getGenderValue()" />
+<div id = "result2">성별은?</div>		
+<hr />
+<br />
+<select name="language" id="selected">
+	<option value="korean">한국어</option>
+	<option value="english">영어</option>
+	<option value="chinese">중국어</option>
+	<option value="japanese">일본어</option>		
+</select>
+<input type="button" value="언어확인" onClick="getSelectedLanguageValue()" />
+<div id="result3">선택하는 언어는?</div>
+</form>
+</body>
+</html>
+
+1.getTextValue1
+gettext1 의 입력값을 name에 저장
+gettextresult1 텍스트를 name 으로 변경
+
+2.getTextValue2
+?? 입력값 name1,name2에 저장
+gettextresult21, gettextresult22 텍스트를 각각 name1,name2으로 변경
+
+3.
+
+
