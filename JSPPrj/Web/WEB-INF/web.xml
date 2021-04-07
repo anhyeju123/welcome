@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>java-jspservlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>FormData_07</servlet-name>
+    <servlet-class>formdata_06.FormData_07</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FormData_07</servlet-name>
+    <url-pattern>/FormData_07</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+    <filter-name>characterEncodingFilter</filter-name>
+    <filter-class>com.newlecture.web.filter.CharacterEncodingFilter</filter-class> <!-- 필터.java 경로 -->
+  </filter>
+  <filter-mapping>
+    <filter-name>characterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>  <!-- 모든 url -->
+  </filter-mapping>
+</web-app>
+<!-- 사용자가  <url-pattern> 에있는 /FormData_07로 요청을하면 (예)http://localhost:8090/FormData_07
+<servlet-class>의 formdata_06.FormData_07 서블릿클래스를 찾으면 실행-->
